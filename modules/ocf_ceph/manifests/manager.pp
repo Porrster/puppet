@@ -1,0 +1,12 @@
+#Puppet file for ceph managers
+class ocf_ceph::manager {
+  firewall_multi {
+    '101 allow ceph manager communication':
+      chain  => 'PUPPET-INPUT',
+      source => $managers,
+      proto  => 'tcp',
+      action => 'accept',
+      dport  => '6800-7300',
+      before => Class['ceph']
+  }
+}

@@ -91,3 +91,17 @@ kubernetes::master_nodes:
 
 # Prometheus config
 prometheus::node_exporter::version: 0.17.0
+
+# Ceph config
+ceph::monitors:
+    - jaws
+    - pandemic
+    - scurvy
+ceph::managers:
+    - jaws
+    - pandemic
+    - scurvy
+ceph::osd_hosts:
+    - jaws
+    - pandemic
+    - scurvy

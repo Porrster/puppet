@@ -1,5 +1,7 @@
 classes:
   - ocf_kvm
+  - ocf_ceph::monitor
+  - ocf_ceph::manager
 
 ocf::networking::bridge: true
 ocf::networking::bond: true
