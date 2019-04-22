@@ -1,1 +1,3 @@
 owner: wporr
+classes:
+  - ocf_ceph
