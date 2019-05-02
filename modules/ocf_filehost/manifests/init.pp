@@ -34,6 +34,11 @@ class ocf_filehost(
       options => ['rw', 'no_subtree_check', 'no_root_squash'],
       hosts   => lookup('kubernetes::worker_nodes');
 
+  '/opt/homes/services':
+      options => ['rw', 'no_subtree_check', 'no_root_squash'],
+      hosts   => lookup('kubernetes::worker_nodes');
+
+
   }
 
   file {
